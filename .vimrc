@@ -1,4 +1,4 @@
-color dark1602
+color rubyblue
 
 set list
 set listchars=tab:▸\ ,eol:.
