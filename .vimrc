@@ -37,7 +37,9 @@ set hidden
 
 map <silent> <F5> :NERDTreeToggle<CR>
 
-
+" jslint
+set makeprg=cat\ %\ \\\|\ /usr/bin/js\ ~/.vim/mylintrun.js\ %
+set errorformat=%f:%l:%c:%m
 
 
 
