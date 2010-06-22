@@ -2,6 +2,10 @@ color dark1602
 
 set list
 set listchars=tab:▸\ ,eol:.
+set number
+set nobackup
+set noswapfile
+set nowritebackup
 
 if has("autocmd")
 
@@ -10,6 +14,7 @@ if has("autocmd")
 
   autocmd FileType yaml setlocal ts=2 sts=2 sw=2 et
   autocmd FileType ruby setlocal ts=2 sts=2 sw=2 et
+  autocmd FileType php setlocal ts=2 sts=2 sw=2 et
   autocmd FileType make setlocal ts=4 sts=4 sw=4 noet
 
   " Four-spaced tabs for javascript
@@ -30,7 +35,7 @@ set foldlevel=3
 " more liberal about hidden buffers
 set hidden
 
-
+map <silent> <F5> :NERDTreeToggle<CR>
 
 
 
