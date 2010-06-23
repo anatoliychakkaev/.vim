@@ -1,5 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_cnt =6
 let g:netrw_dirhist_1='/home/projects/myown/rails/webdesk'
 let g:netrw_dirhist_2='/home/projects/myown/rails/webdesk/app'
-let g:netrw_dirhist_3='/home/projects/myown/rails/webdesk/app/controllers'
+let g:netrw_dirhist_3='/home/projects/myown/rails/webdesk/app/helpers'
+let g:netrw_dirhist_4='/home/projects/myown/rails/outlays/config/environments'
+let g:netrw_dirhist_5='/home/projects/myown/rails/outlays/config'
+let g:netrw_dirhist_6='/home/projects/myown/rails/outlays/public/javascripts'
