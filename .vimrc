@@ -1,27 +1,27 @@
-color rubyblue
-
 set list
 set listchars=tab:▸\ ,eol:.
 set number
 set noswapfile
 set nowritebackup
-set backupdir=~/backup
+set backupdir=~/.vim/backup
+
+set t_Co=256
+color fu
+
+let MRU_File = '/tmp/mru'
 
 if has("autocmd")
-
   " Enable file type detection
   filetype on
 
-  autocmd FileType yaml setlocal ts=2 sts=2 sw=2 et
-  autocmd FileType ruby setlocal ts=2 sts=2 sw=2 et
-  autocmd FileType php setlocal ts=2 sts=2 sw=2 et
-  autocmd FileType make setlocal ts=4 sts=4 sw=4 noet
-
-  " Four-spaced tabs for javascript
+  autocmd filetype yaml       setlocal ts=2 sts=2 sw=2 et
+  autocmd FileType ruby       setlocal ts=2 sts=2 sw=2 et
+  autocmd FileType php        setlocal ts=2 sts=2 sw=2 et
+  autocmd FileType make       setlocal ts=4 sts=4 sw=4 noet
   autocmd FileType javascript setlocal ts=4 sts=4 sw=4 noet
-  " House-style
-  autocmd FileType html setlocal ts=2 sts=2 sw=2 et
-  autocmd FileType css setlocal ts=2 sts=2 sw=2 et
+
+  autocmd FileType html       setlocal ts=2 sts=2 sw=2 et
+  autocmd FileType css        setlocal ts=2 sts=2 sw=2 et
 
   autocmd FileType php let b:surround_45 = "<?php \r ?>"
   autocmd FileType ruby let b:surround_45 = "<% \r %>"
