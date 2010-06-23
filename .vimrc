@@ -3,9 +3,9 @@ color rubyblue
 set list
 set listchars=tab:▸\ ,eol:.
 set number
-set nobackup
 set noswapfile
 set nowritebackup
+set backupdir=~/backup
 
 if has("autocmd")
 
