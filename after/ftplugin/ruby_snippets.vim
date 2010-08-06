@@ -31,3 +31,5 @@ exec "Snippet rejecto reject do |".st."element".et."| <CR>".st."element".et.".".
 exec "Snippet inject inject(".st."object".et.") { |".st."injection".et.", ".st."element".et."| ".st.et." }<CR>".st.et
 exec "Snippet select select { |".st."element".et."| ".st."element".et.".".st.et." }<CR>".st.et
 exec "Snippet raise raise ".st."something".et.".inspect"
+exec "Snippet it it \"should ".st.et."\" do<CR>".st.et."<CR>end"
+exec "Snippet itshr it \"should render ".st."action".et."\" do<CR>".st."method".et." :".st."action".et."<CR>response.should render_template(:".st."action".et.")<CR>end"
