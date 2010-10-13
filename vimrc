@@ -1,3 +1,6 @@
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
+
 set list
 set listchars=tab:▸\ ,eol:.
 set number
@@ -16,9 +19,10 @@ if has("autocmd")
 
   autocmd filetype yaml       setlocal ts=2 sts=2 sw=2 et
   autocmd FileType ruby       setlocal ts=2 sts=2 sw=2 et
+  autocmd FileType cucumber   setlocal ts=2 sts=2 sw=2 et
   autocmd FileType php        setlocal ts=2 sts=2 sw=2 et
   autocmd FileType make       setlocal ts=4 sts=4 sw=4 noet
-  autocmd FileType javascript setlocal ts=4 sts=4 sw=4 noet
+  autocmd FileType javascript setlocal ts=4 sts=4 sw=4 et
 
   autocmd FileType html       setlocal ts=2 sts=2 sw=2 et
   autocmd FileType css        setlocal ts=2 sts=2 sw=2 et
@@ -27,6 +31,13 @@ if has("autocmd")
   autocmd FileType ruby let b:surround_45 = "<% \r %>"
   autocmd FileType ruby let g:surround_61 = "<%= \r %>"
 endif
+
+set autoindent
+" Additional 3 lines padding
+set so=3
+
+" 10 milliseconds timeout lenght
+set tm=10
 
 set foldmethod=indent
 set foldlevel=3
@@ -68,11 +79,6 @@ set nocompatible
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
-if has("vms")
-  set nobackup		" do not keep a backup file, use versions instead
-else
-  set backup		" keep a backup file
-endif
 set history=50		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
 set showcmd		" display incomplete commands
@@ -90,7 +96,7 @@ inoremap <C-U> <C-G>u<C-U>
 
 " In many terminal emulators the mouse works just fine, thus enable it.
 if has('mouse')
-"  set mouse=a
+  set mouse=a
 endif
 
 " Switch syntax highlighting on, when the terminal has colors
