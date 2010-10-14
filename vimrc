@@ -41,12 +41,17 @@ set tm=10
 
 set foldmethod=indent
 set foldlevel=3
+" very short timeout
+set tm=5
+" scrolloff 3 lines
+set so=3
 
 " By default, Vim makes it difficult to create hidden buffers. To make Vim
 " more liberal about hidden buffers
 set hidden
 
 map <silent> <F5> :NERDTreeToggle<CR>
+nmap <F6> A do<ESC>oend<ESC>O
 
 " jslint
 set makeprg=cat\ %\ \\\|\ /usr/bin/js\ ~/.vim/mylintrun.js\ %
