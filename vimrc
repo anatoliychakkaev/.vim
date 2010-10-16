@@ -7,17 +7,21 @@ set number
 set noswapfile
 set nowritebackup
 set backupdir=~/.vim/backup
+set nocompatible
 
 set t_Co=256
 color fu
 
 let MRU_File = '/tmp/mru'
 
+filetype off
+filetype plugin indent on
+
 if has("autocmd")
   " Enable file type detection
   filetype on
 
-  autocmd filetype yaml       setlocal ts=2 sts=2 sw=2 et
+  autocmd FileType yaml       setlocal ts=2 sts=2 sw=2 et
   autocmd FileType ruby       setlocal ts=2 sts=2 sw=2 et
   autocmd FileType cucumber   setlocal ts=2 sts=2 sw=2 et
   autocmd FileType php        setlocal ts=2 sts=2 sw=2 et
@@ -79,7 +83,6 @@ endif
 
 " Use Vim settings, rather than Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
-set nocompatible
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
