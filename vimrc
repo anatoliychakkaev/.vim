@@ -43,10 +43,13 @@ set so=3
 " 10 milliseconds timeout lenght
 set tm=10
 
-set foldmethod=indent
+" setup folding
+set foldmethod=marker
 set foldlevel=3
+
 " very short timeout
 set tm=5
+
 " scrolloff 3 lines
 set so=3
 
@@ -56,6 +59,13 @@ set hidden
 
 map <silent> <F5> :NERDTreeToggle<CR>
 nmap <F6> A do<ESC>oend<ESC>O
+
+" Bubble single lines
+nmap <C-Down> ddp=kj
+nmap <C-Up> ddkP=j
+" Bubble multiple lines
+vmap <C-Up> xkP`[V`]=
+vmap <C-Down> xp`[V`]=
 
 " jslint
 set makeprg=cat\ %\ \\\|\ /usr/bin/js\ ~/.vim/mylintrun.js\ %
