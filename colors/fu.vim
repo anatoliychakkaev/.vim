@@ -119,3 +119,4 @@ hi rubyPredefinedConstant    ctermfg=167                     guifg=#d75f5f
 hi rubyPseudoVariable        ctermfg=221                     guifg=#ffd75f
 hi rubyStringDelimiter       ctermfg=143                     guifg=#afaf5f
 
+highlight ColorColumn ctermbg=233 guibg=black
