@@ -9,8 +9,9 @@ set nowritebackup
 set backupdir=~/.vim/backup
 set nocompatible
 
-set t_Co=256
-color fu
+"set t_Co=256
+"color fu
+color bclear
 
 let MRU_File = '/tmp/mru'
 
@@ -21,12 +22,17 @@ if has("autocmd")
   " Enable file type detection
   filetype on
 
+  autocmd BufNewFile,BufRead *.ejs set filetype=html
+  autocmd BufNewFile,BufRead Jakefile set filetype=javascript
   autocmd FileType yaml       setlocal ts=2 sts=2 sw=2 et
+  autocmd FileType jade       setlocal ts=2 sts=2 sw=2 et
+  autocmd FileType ejs        setlocal ts=2 sts=2 sw=2 et
   autocmd FileType ruby       setlocal ts=2 sts=2 sw=2 et
-  autocmd FileType cucumber   setlocal ts=2 sts=2 sw=2 et
+  autocmd FileType cucumber   setlocal ts=2 sts=2 sw=2 noet nolist
   autocmd FileType php        setlocal ts=2 sts=2 sw=2 et
   autocmd FileType make       setlocal ts=4 sts=4 sw=4 noet
   autocmd FileType javascript setlocal ts=4 sts=4 sw=4 et
+  autocmd FileType coffee     setlocal ts=4 sts=4 sw=4 et
 
   autocmd FileType html       setlocal ts=2 sts=2 sw=2 et
   autocmd FileType css        setlocal ts=2 sts=2 sw=2 et
@@ -35,6 +41,9 @@ if has("autocmd")
   autocmd FileType ruby let b:surround_45 = "<% \r %>"
   autocmd FileType ruby let g:surround_61 = "<%= \r %>"
 endif
+
+" 80 column hl
+" set colorcolumn=80
 
 set autoindent
 " Additional 3 lines padding

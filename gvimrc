@@ -1,2 +1,2 @@
 set guioptions=
-set guifont=Andale\ Mono\ Bold\ 12
+set guifont=Monospace\ bold\ 11
