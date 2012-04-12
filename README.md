@@ -12,4 +12,5 @@ Install
     ln -s ~/.vim/gvimrc  ~/.gvimrc
 
     # update submodules
+    cd ~/.vim
     git submodule update --init
